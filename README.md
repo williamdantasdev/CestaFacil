@@ -369,13 +369,17 @@ dart run build_runner build --delete-conflicting-outputs
 ### Fluxo de Git
 
 - **Branches**: `main` (estável) ← `develop` ← `feature/<nome>`.
-- **Commits**: [Conventional Commits](https://www.conventionalcommits.org/pt-br/)
+- **Commits**: [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) **em inglês** (imperativo, minúsculo, sem ponto final).
   ```
-  feat(shopping_list): adicionar item local à lista
-  fix(catalog): corrigir normalização de busca
-  docs(readme): atualizar roadmap
-  chore(deps): adicionar drift e riverpod
+  feat(shopping-list): add local product to list
+  fix(catalog): correct search normalization
+  docs(readme): update roadmap
+  chore(deps): add drift and riverpod
+  refactor(units): extract base conversion helper
+  test(price-compare): cover 500g vs 1kg case
   ```
+  Tipos: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`.
+- **Escopo**: nome da feature em kebab-case (`shopping-list`, `catalog`, `recipes`, `price-compare`).
 - **PRs** para `develop` descrevendo o que muda e como testar.
 
 ---
